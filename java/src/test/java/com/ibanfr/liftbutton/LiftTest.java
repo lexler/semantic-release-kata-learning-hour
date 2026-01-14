@@ -22,4 +22,15 @@ class LiftTest {
                 .as("Lift should be created")
                 .isNotNull();
     }
+
+
+    @Test
+    @DisplayName("doors should be closed when lift is first created")
+    void doors_should_be_closed_initially() {
+        Lift lift = new Lift();
+
+        assertThat(lift.closed())
+            .as("doors should be closed")
+            .isEqualTo("CLOSED");
+    }
 }
