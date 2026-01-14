@@ -1,3 +1,16 @@
+# [2.0.0](https://github.com/lexler/semantic-release-kata-learning-hour/compare/v1.1.0...v2.0.0) (2026-01-14)
+
+
+### Features
+
+* doors are open when the lift is created ([da26a83](https://github.com/lexler/semantic-release-kata-learning-hour/commit/da26a830f6ba13586acaafbcb1eafa77dcd6fc0e))
+
+
+### BREAKING CHANGES
+
+* doors used to be closed when the lift is created. Now they are open.
+ Also changed the API of Lift, renamed method closed to doors
+
 # [1.1.0](https://github.com/lexler/semantic-release-kata-learning-hour/compare/v1.0.0...v1.1.0) (2026-01-14)
 
 
