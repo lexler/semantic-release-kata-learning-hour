@@ -32,8 +32,8 @@ class LiftTest {
 
 
     @Test
-    @DisplayName("doors should be closed when lift is first created")
-    void doors_should_be_closed_initially() {
+    @DisplayName("doors should be CLOSED when Lift is created")
+    void doors_should_be_closed_when_the_lift_is_created() {
         assertThat(lift.closed())
             .as("doors should be closed")
             .isEqualTo("CLOSED");
