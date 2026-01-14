@@ -1,5 +1,6 @@
 package com.ibanfr.liftbutton;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -14,21 +15,25 @@ class LiftTest {
     //[] - should switch OFF the lights when lift arrives
     //[] - lights should be OFF when button is pressed and doors are OPEN
 
+    private Lift lift;
+
+    @BeforeEach
+    void setUp() {
+        lift = new Lift();
+    }
+
     @Test
     @DisplayName("should create a new Lift")
     void should_create_a_new_Lift() {
-
-        assertThat(new Lift())
-                .as("Lift should be created")
-                .isNotNull();
+        assertThat(lift)
+            .as("Lift should be created")
+            .isNotNull();
     }
 
 
     @Test
     @DisplayName("doors should be closed when lift is first created")
     void doors_should_be_closed_initially() {
-        Lift lift = new Lift();
-
         assertThat(lift.closed())
             .as("doors should be closed")
             .isEqualTo("CLOSED");
