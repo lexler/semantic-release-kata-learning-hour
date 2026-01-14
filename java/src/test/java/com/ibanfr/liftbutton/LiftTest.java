@@ -3,7 +3,6 @@ package com.ibanfr.liftbutton;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -11,7 +10,7 @@ class LiftTest {
 
     //TEST LIST
     //[x] - doors should be CLOSED when Lift is created
-    //[] - should switch lights ON when button is pressed and doors are CLOSED
+    //[X] - should switch lights ON when button is pressed and doors are CLOSED
     //[] - should OPEN the lift doors when lift arrives
     //[] - should switch OFF the lights when lift arrives
     //[] - lights should be OFF when button is pressed and doors are OPEN
@@ -33,11 +32,11 @@ class LiftTest {
 
 
     @Test
-    @DisplayName("doors should be CLOSED when Lift is created")
-    void doors_should_be_closed_when_the_lift_is_created() {
-        assertThat(lift.closed())
-            .as("doors should be closed")
-            .isEqualTo("CLOSED");
+    @DisplayName("doors should be OPENED when Lift is created")
+    void doors_should_be_opened_when_the_lift_is_created() {
+        assertThat(lift.doors())
+            .as("doors should be open")
+            .isEqualTo("OPEN");
     }
 
     @Test
